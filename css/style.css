@@ -1,0 +1,341 @@
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+	padding: 1rem;
+}
+
+/*--- Bootstrap Mobile Gutter Fix --*/
+.row,
+.container-fluid {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+/*--- Fix for Fixed Navbar jumping on scroll --*/
+.fixed-top {
+	-webkit-backface-visibility: hidden;
+}
+
+/*--- Fixed Landing Page Section --*/
+.landing {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: table;
+	z-index: -1;
+}
+.home-wrap {
+	clip: rect(0, auto, auto, 0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.home-inner {
+	position: fixed;
+	display: table;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	will-change: transform;
+}
+
+/*--- iOS Fixed Background Image --*/
+.fixed-background {
+	position: relative;
+	width: 100%;
+}
+.fixed-wrap {
+	clip: rect(0, auto, auto, 0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -999 !important;
+}
+.fixed {
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	will-change: transform;
+}
+
+/* Importing LATO font from google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
+	color: #505962;
+}
+
+/* when we scroll the page should show correctly where we are, to avoid the space taken by the navbar we have offset styling */
+
+.offset:before {
+	display: block;
+	content: "";
+	height: 4rem;
+	margin-top: -4rem;
+}
+
+/* Navigation */
+
+.navbar {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	font-size: 0.9rem;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand img {
+	height: 2rem;
+}
+
+.navbar-nav li {
+	padding-right: 0.7rem;
+}
+
+.navbar .navbar-nav .nav-link {
+	padding-top: 0.8rem;
+	color: #ffffff;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+	color: #1ebba3;
+}
+
+/* End Navigation */
+
+/* Landing Page */
+
+.home-inner {
+	background-image: url(../img/landingimg.png);
+}
+
+.caption {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 38%;
+	z-index: 1;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.caption h1 {
+	font-size: 3.8rem;
+	font-weight: 700;
+	letter-spacing: 0.3rem;
+	text-shadow: .1rem .1rem .8rem black;
+	padding-bottom: 1rem;
+}
+
+.caption h2 {
+	font-size: 2rem;
+	text-shadow: .1rem .1rem .5rem black;
+	padding-bottom: 1.6rem;
+	letter-spacing: 0.1rem;
+}
+
+.btn-lg {
+	border-width: medium;
+	border-radius: 0;
+	padding: 0.6rem 1.3rem;
+	font-size: 1.1rem;
+}
+
+/* End Landing Page */
+
+/* Projects Section */
+
+.jumbotron {
+	margin-bottom: 0;
+	padding: 2rem 0 3.5rem;
+	border-radius: 0;
+}
+
+h3.heading {
+	font-size: 1.9rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 1.9rem;
+}
+
+.heading-underline {
+	width: 3rem;
+	height: .2rem;
+	background-color: #1ebba3;
+	margin: 0 auto 2rem;
+}
+
+.project svg.svg-inline--fa {
+	color: #1ebba3;
+}
+
+.project h3 {
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	padding-bottom: .4rem;
+}
+
+.project p {
+	font-size: 1.1rem;
+}
+
+/* End Projects Section */
+
+/* Courses Section */
+
+.courses img {
+	width: 50%;
+}
+
+blockquote .svg-inline--fa {
+	color: #1ebba3;
+	margin: 1rem;
+}
+
+.courses-hr {
+	border-top: 0.05rem solid #1ebba3;
+}
+
+/* End Courses Section */
+
+/* Resources Section */
+
+.fixed {
+	background-image: url(../img/apple.png);
+	/* z-index -1 will make sure the image is beneath the content */
+	z-index: -1;
+}
+
+.dark {
+	background-color: rgba(0, 0, 0, 0.75);
+	color: #ffffff;
+	padding: 7rem 2rem;
+}
+
+.fixed-background h3 {
+	margin-bottom: 2rem;
+}
+
+.fixed-background p {
+	margin-top: 1.5rem;
+}
+
+/* End Resources Section */
+
+/* start about section */
+
+#about #googleMap {
+	width: 100%;
+	height: 400px;
+}
+
+.carousel-inner img {
+	width: 70%;
+}
+
+.carousel-control-prev span {
+	color: black;
+}
+
+/* end about section */
+
+/* footer Section */
+
+footer {
+	background-color: #40474e;
+	color: #ffffff;
+	padding-top: 1rem;
+}
+
+footer a {
+	color: #ffffff;
+}
+
+#footer a {
+	margin-left: 1rem;
+}
+
+#footer a:hover {
+	color: #1ebba3 !important;
+}
+
+#footer .love {
+	color: #1ebba3;
+	padding: 0.5rem;
+}
+
+#footer .lower {
+	padding-bottom: 1rem;
+}
+
+hr.socket {
+	width: 100%;
+	border-top: .2rem solid #666b71;
+}
+
+/* End footer Section */
+
+/* Styling for screens below 576px */
+
+@media (max-width: 576px) {
+	.caption h1 {
+		font-size: 2.3rem;
+		letter-spacing: 0.15rem;
+		padding-bottom: .5rem;
+	}
+
+	.caption h3 {
+		font-size: 1.2rem;
+		padding-bottom: 1.2rem;
+	}
+
+	.btn-lg {
+		padding: 0.5rem 1rem;
+		font-size: 1rem;
+	}
+	.narrow h1 {
+		font-size: 1.5rem;
+	}
+	.courses img,
+	.certifications img {
+		max-width: 20%;
+		margin: 0 auto;
+		display: block;
+	}
+	.project i {
+		font-size: 2.5rem;
+	}
+	.carousel-inner img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* Styling for screens above 768px i.e medium  */
+
+@media (min-width: 756px) {
+	#about .about {
+		padding-top: 150px;
+	}
+}
+
+/* End media queries */
